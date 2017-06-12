@@ -47,8 +47,7 @@
 </head>
 <body>
 <!-- Simple header with fixed tabs. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
-            mdl-layout--fixed-tabs">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
@@ -56,16 +55,17 @@
     </div>
     <!-- Tabs -->
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-      <a href="#fixed-tab-1" class="mdl-layout__tab">About Me</a>
-      <a href="#fixed-tab-2" class="mdl-layout__tab is-active">Experience</a>
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">About Me</a>
+      <a href="#fixed-tab-2" class="mdl-layout__tab">Experience</a>
       <a href="#fixed-tab-3" class="mdl-layout__tab">Contact Me</a>
     </div>
   </header>
   <main class="mdl-layout__content">
+
     <!--tab 1 content code-->
-    <section class="mdl-layout__tab-panel" id="fixed-tab-1">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
       <div class="mdl-grid page-content about-me-tab"><!-- Your content goes here -->
-        <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
+        <div class="mdl-grid mdl-cell mdl-card mdl-shadow--4dp">
           <div class="mdl-card__media mdl-cell mdl-cell--12-col-tablet">
             <img class="about-me-card-image" src=" images/profilepic.jpg" border="0" alt="">
           </div>
@@ -79,8 +79,8 @@
             </div>
           </div>
         </div>
-        <div class="reverse-order mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
-          <div class="mdl-card__media mdl-cell mdl-cell--12-col-tablet">
+        <div class="mdl-grid mdl-cell mdl-card mdl-shadow--4dp">
+          <div class="reverse-order mdl-card__media mdl-cell mdl-cell--12-col-tablet">
             <img class="about-me-card-image" src=" images/landscape-mountains-nature-lake.jpg" border="0" alt="">
           </div>
           <div class="mdl-cell mdl-cell--8-col">
@@ -93,7 +93,7 @@
             </div>
           </div>
         </div>
-        <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
+        <div class="mdl-grid mdl-cell mdl-card mdl-shadow--4dp">
           <div class="mdl-card__media mdl-cell mdl-cell--12-col-tablet">
             <img class="about-me-card-image" src=" images/mountain_road.jpeg" border="0" alt="">
           </div>
@@ -149,20 +149,33 @@
             <h2 class="mdl-card__title-text">Links</h2>
           </div>
           <div class="mdl-card__supporting-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aenan convallis.
+            <a class="" href="https://www.facebook.com/soultrain2013">Facebook</a>
+            <a class="" href="">GitHub</a>
+            <a class="" href="">LinkedIn</a>
           </div>
         </div>
       </div>
     </section>
 
     <!--tab 3 content code-->
-    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-3">
+    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
       <div class="page-content contact-me-tab"><!-- Your content goes here -->
-        
+        <form class="mdl-shadow--4dp">
+          <fieldset>
+            <input class="mdl-textfield" type="text" id="name" placeholder="Name">
+          </fieldset>
+          <fieldset>
+            <input class="mdl-textfield" type="email" id="email" placeholder="E-mail Address">
+          </fieldset>
+          <fieldset>
+            <textarea class="mdl-textfield" id="message-field" cols="30" rows="8" placeholder="Type Your Message Here"></textarea>
+          </fieldset>
+          <fieldset>
+            <button type="submit" class="mdl-button">Send</button>
+          </fieldset>
+        </form>
       </div>
     </section>
-
   </main>
 </div>
 </body>
